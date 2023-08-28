@@ -30,7 +30,7 @@ useEffect(() => {
 const sendPost = async(e) => {
 e.preventDefault();
 const inputToSend = input;
-
+setInput('')
 
 const colRef = collection(db, 'posts');
 await addDoc(colRef, {
