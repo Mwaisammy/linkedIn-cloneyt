@@ -1,50 +1,37 @@
 import React from 'react';
-import "./Widgets.css";
-// import Info from '@mui/icons-material/Info';
-// import FiberManualRecord from '@mui/icons-material/FiberManualRecord';
-import { FiberManualRecordRounded, InfoRounded } from '@mui/icons-material';
+import './Widgets.css';
+import { FiberManualRecord, Info } from '@mui/icons-material';
 
 function Widgets() {
 
-    const newsArticle=(heading,subtitle)=>(
-        <div className="widget_article">
-            <div className="widget_left">
-                <FiberManualRecordRounded/>
-                
-                </div>
+  const newsArticle = (heading, subtitle) => (
+    <div className='widgets__article'>
+      <div className='widgets__articleLeft'>
+        <FiberManualRecord/>
 
-                <div className="widget_right">
-
-                   <span className='one'>{heading } <br/></span> 
-                    {subtitle}
-                    
-                    
-                    </div>
-            </div>
-    )
+      </div>
+        <div className='widgets__articleRight'>
+          <h3>{heading}</h3>
+          <p>{subtitle}</p>
+        </div>
+    </div>
+  );
   return (
     <div className='widgets'>
-        <div className="widgets_header">
-            <h2> Linkedin News</h2>
-            
-            <InfoRounded />
-            </div>
-            {newsArticle("Pakistan Cricket is Back", "Top news of 2022")}
-            {newsArticle(" PMLN & PPP joins Hands to demolish IK", "Source Geo News")}
-      
-            {newsArticle("Elon musk launching another missile", "Elon musk shining star")}
-      
-            {newsArticle("Immigration process gets halted due to covid rise", "Top news of 2022")}
-      
-            {newsArticle("Man killed his daughter over dispute", "Bahawalpur ")}
-      
-       
-      
-       
-      
-      
+      <div className='widgets__header'>
+        <h1>LinkedIn News</h1>
+      <Info />
+      </div>
+
+      {newsArticle('PAPA react is back ', "Top news -999 readers ")}
+      {newsArticle('Coronavirus : UK update', "Top news -886")}
+      {newsArticle('Tesla hits new high', "Cars & auto -300")}
+      {newsArticle('Bitcoin breaks s22k', "Crypto - 123 8000 readers")}
+      {newsArticle('Is Redux too good?', 'Code 123 readers')}
+      {newsArticle('PAPA react launches new course!!', "Top news - 6545 readers")}
+
     </div>
-  )
+  ) 
 }
 
-export default Widgets
+export default Widgets;
